@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validation Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="main">
+        <div id="sub">
+            <form action="#" id="validationForm">
+                <h2>Registration Form</h2>
+
+               
+                <label for="user">Username</label>
+                <input type="text" placeholder="Enter your name" id="user" name="name" class="input user" />
+                <span id="error"></span>
+                
+                <label for="pass">Password</label>
+                <input type="password" placeholder="Enter your password" id="pass" name="password" class="input pass"/>
+                <span id="error"></span>
+               
+                <label for="date">Date of Birth</label>
+                <input type="date" id="date" class="input date" name="dob" />
+                <span id="error"></span>
+                
+                <label for="gender">Gender</label>
+                <select id="gender" class="input gender" name="gender"  style="width: 19.5rem;">
+                    <option value="">Select</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                    <option value="transgender">Transgender</option>
+                </select>
+                <span id="error"></span>
+
+              
+                <label for="email">E-mail</label>
+                <div id="addingMail">
+                    <input type="email"  placeholder="Enter your email" class="input email" name="email" id="email" />
+                    <span id="error"></span>
+                </div>
+
+              
+                <button type="button" id="invitedemail">ADD E-MAIL</button>
+                <input type="submit" id="submit">
+                <button type="button" id="viewdetails">View Details</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="sample.js"></script>
+</body>
+
+</html>
