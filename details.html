@@ -53,55 +53,8 @@
                 <th>Remove</th>
             </tr>
         </thead>
-        <tbody></tbody>
+        <tbody ></tbody>
     </table>
-    <script>
-        window.addEventListener('DOMContentLoaded',()=>{
-            let tablebody=document.querySelector('#table tbody');
-            let data=JSON.parse(localStorage.getItem('details')) || [];
-
-            if(data.length === 0){alert("No user details")}
-
-            else{
-                data.forEach((user)=>{
-                    let row =document.createElement('tr');
-                    console.log(user)
-                    
-                    let usernames=document.createElement('td');
-                    usernames.innerText=user.username;
-
-                    let passwords=document.createElement('td');
-                    passwords.innerText=user.password;
-
-                    let dobs=document.createElement('td');
-                    dobs.innerText=user.date;
-
-                    let genders=document.createElement('td');
-                    genders.innerText=user.gender;
-
-                    let emails=document.createElement('td');
-                    emails.innerText=user.email ;
-
-                    let invitedmail=document.createElement('td');
-                    invitedmail.textContent=user.invited
-
-                    let remove=document.createElement('td');
-                    remove.innerText='DEL'
-
-                    remove.addEventListener('click',()=>{
-                        let index=data.findIndex((current)=>{
-                            return current.username == user.username;
-                        })
-                        row.remove();
-                        data.splice(index,1);
-                        localStorage.setItem('details',JSON.stringify(data))
-                    })
-
-                    row.append(usernames,passwords,dobs,genders,emails,invitedmail,remove)
-                    tablebody.append(row)
-                })
-            }
-        })
-    </script>
+    <script src="sample.js"></script>
 </body>
 </html>
